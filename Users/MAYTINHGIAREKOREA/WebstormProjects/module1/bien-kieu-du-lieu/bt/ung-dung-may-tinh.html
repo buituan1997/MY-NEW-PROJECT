@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="2"><input type="text" id="so1"></td>
+        <td colspan="2"><input type="text" id="so2"></td>
+
+    </tr>
+    <tr>
+        <td>
+            <button value="+" onclick="cong()">Addition(+)</button>
+        </td>
+        <td>
+            <button value="-" onclick="tru()">Subtraction(-)</button>
+        </td>
+        <td>
+            <button value="*" onclick="nhan()">Multiplication(x)</button>
+        </td>
+        <td>
+            <button value="/" onclick="chia()">Division(/)</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function cong() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let tong = a + b;
+        document.write(tong);
+    }
+
+    function tru() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let hieu = a - b;
+        document.write(hieu);
+    }
+
+    function nhan() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let tich = a * b;
+        document.write(tich)
+    }
+
+    function chia() {
+        let a = parseInt(document.getElementById("so1").value);
+        let b = parseInt(document.getElementById("so2").value);
+        let thuong = a / b
+        document.write(thuong)
+    }
+</script>
+</body>
+</html>
