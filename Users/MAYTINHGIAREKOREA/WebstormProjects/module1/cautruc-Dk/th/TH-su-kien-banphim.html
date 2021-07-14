@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<img src="https://vietucnews.net/wp-content/uploads/2019/05/mh2.jpg" id="Mycat"
+     style="position:absolute;left: 0;top :0" height="100" width="80">
+<script>
+    function upImg() {
+        let a = document.getElementById("Mycat")
+        a.style.top = parseInt(a.style.top) + 5 + "px"
+    }
+
+    function downImg() {
+        let a = document.getElementById("Mycat")
+        a.style.top = parseInt(a.style.top) - 5 + "px"
+    }
+
+    function leftImg() {
+        let a = document.getElementById("Mycat")
+        a.style.left = parseInt(a.style.left) + 5 + "px"
+    }
+        function rightImg() {
+            let a = document.getElementById("Mycat")
+            a.style.left = parseInt(a.style.left) - 5 + "px"
+        }
+
+        function run(evt) {
+            switch (evt.keyCode) {
+                case 39:
+                    leftImg()
+                    break
+                case 37:
+                    rightImg()
+                    break
+                case 40:
+                    upImg()
+                    break
+                case 38:
+                    downImg()
+                    break
+            }
+        }
+
+        function docReady() {
+            window.addEventListener('keydown', run)
+        }
+
+</script>
+</body>
+</html>

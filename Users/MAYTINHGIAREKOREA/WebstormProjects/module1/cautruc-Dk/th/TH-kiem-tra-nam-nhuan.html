@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let year = parseInt(prompt("nhap so nam kiem tra"))
+    let isleapyear = false;
+    if (year % 4 === 0) {
+        if (year % 100 === 0) {
+            if (year % 400 === 0) {
+                isleapyear=true
+            }
+    }else {
+        isleapyear=true;
+    }
+    }
+    if(isleapyear){
+        alert(year+"is leap year")
+    }else {
+        alert(year +"is not leap year")
+    }
+</script>
+</body>
+</html>
